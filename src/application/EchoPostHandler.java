@@ -25,6 +25,7 @@ public class EchoPostHandler implements HttpHandler {
             InputStreamReader isr = new InputStreamReader(he.getRequestBody(), "utf-8");
             BufferedReader br = new BufferedReader(isr);
             String query = br.readLine();
+            System.out.println("queryline: " + query);
             parseQuery(query, parameters);
 
             // send response
